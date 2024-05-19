@@ -12,3 +12,8 @@ class IRepositoryAdmin(ABC):
     def login(admin: Type[AdminProps]) -> dict:
         """login for admin"""
         raise NotImplementedError("implement method login")
+    
+    @abstractmethod
+    def get(id_admin: int) -> dict:
+        """get datas admin"""
+        raise NotImplementedError("implement method get")

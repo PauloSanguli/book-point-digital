@@ -12,6 +12,8 @@ from sqlalchemy import and_, select
 
 from fastapi import HTTPException
 
+from src.infra.http.responses.responses import Response
+
 
 
 class RepositorySetudent(IRepositoryStudent):
@@ -27,3 +29,18 @@ class RepositorySetudent(IRepositoryStudent):
                 detail="student dont registed",
                 status_code=400
             )
+    
+    def get() -> list:
+        """select students from db"""
+        with Session(engine) as session:
+            query = select(
+                student.c.id,
+                student.c.name,
+                student.c.grade,
+                student.c.course,
+                student.c.classroom,
+                student.c.turn,
+                student.c.photo)
+            results = session.execute(query).fetchall()
+        return Response.get_students(results)
+            

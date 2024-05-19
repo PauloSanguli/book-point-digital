@@ -4,8 +4,11 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.infra.http.views.admin import post_admin
+from src.infra.http.views.admin import get_admin
+from src.infra.http.views.admin import patch_admin
 from src.infra.http.views.student import post_student
 from src.infra.http.views.student import delete_student
+from src.infra.http.views.student import get_student
 from src.infra.http.views.teachers import post_teacher
 from src.infra.http.views.teachers import delete_teacher
 
@@ -17,9 +20,12 @@ import uvicorn
 app = FastAPI(title="API book school")
 
 app.include_router(post_admin)
+app.include_router(get_admin)
+app.include_router(patch_admin)
 app.include_router(delete_student)
-app.include_router(delete_teacher)
 app.include_router(post_student)
+app.include_router(get_student)
+app.include_router(delete_teacher)
 app.include_router(post_teacher)
 
 app.add_middleware(

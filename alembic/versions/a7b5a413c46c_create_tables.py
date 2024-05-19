@@ -29,7 +29,8 @@ def upgrade() -> None:
         Column("id", INTEGER, autoincrement=True, primary_key=True),
         Column("email", VARCHAR(50), nullable=False,unique=True),
         Column("password", TEXT, nullable=False),
-        Column("name", TEXT, nullable=False)
+        Column("name", TEXT, nullable=False),
+        Column("photo", TEXT),
     )
 
     op.create_table(

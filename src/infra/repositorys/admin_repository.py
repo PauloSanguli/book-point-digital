@@ -20,7 +20,7 @@ from fastapi import HTTPException
 
 
 class RepositoryAdmin(IRepositoryAdmin):
-    def login(admin_props: type[AdminProps]) -> dict:
+    def login(admin_props: Type[AdminProps]) -> dict:
         """login for admin"""
         
         PASSWORD_AVAILABLE = not validate_password(admin_props.password)
@@ -51,5 +51,22 @@ class RepositoryAdmin(IRepositoryAdmin):
             status_code=400
         )
             
-        
-        
+    def get(id_admin: int) -> dict:
+        """get datas of admin"""
+        with Session(engine) as session:
+            query = select(
+                admin.c.name,
+                admin.c.email,
+                admin.c.photo
+            ).where(and_(admin.c.id==id_admin))
+            datas = session.execute(query).fetchone()
+        if not datas:
+            raise HTTPException(
+                detail="datas dont found",
+                status_code=404
+            )
+        return {
+            "name": datas[0],
+            "email": datas[1],
+            "photo": datas[2]
+        }
