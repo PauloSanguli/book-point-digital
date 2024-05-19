@@ -1,0 +1,3 @@
+from .admin_repository import RepositoryAdmin
+from .student_repository import RepositorySetudent
+from .teachers_repository import RepositoryTeachers

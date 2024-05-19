@@ -8,7 +8,7 @@ from typing import Type
 
 class IRepositoryStudent(ABC):
     @abstractmethod
-    def create(student: type[model]) -> dict:
+    def create(student: Type[model]) -> dict:
         """regist student on db"""
         raise NotImplementedError("implement method create")
     

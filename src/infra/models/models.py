@@ -4,13 +4,13 @@ from sqlalchemy import (
     TEXT, VARCHAR, Table,
     ForeignKey
 )
-
+from py_dotenv import read_dotenv
 
 import os
 
 
 
-
+read_dotenv(".env")
 
 engine = create_engine(str(os.getenv("DATABASE_URI")))
 metadata = MetaData()
