@@ -1,5 +1,7 @@
 from src.resources import PATH
 
+from fastapi import HTTPException
+
 from pathlib import Path
 
 import json
@@ -17,8 +19,15 @@ class HandlerJSON:
     
     def read(self, filename: str) -> dict:
         """read datas on json file"""
-        text_json = Path(os.path.join(self.__path, filename)).read_text()
-        return self.__decode(text_json)
+        try:
+            text_json = Path(os.path.join(self.__path, filename)).read_text()
+            return self.__decode(text_json)
+        except json.JSONDecodeError:
+            print("error decoding")
+            raise HTTPException(
+                detail="error decoding json, file is empty",
+                status_code=400
+            )
 
     def read_all(self) -> list:
         """read all times"""

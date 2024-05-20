@@ -41,6 +41,8 @@ def edit_account(account_logged: Annotated[
 
 @patch_admin.patch("/time")
 def update_time(props: Times):
+    controller.update_time(props)
+    
     return JSONResponse(
         content=jsonable_encoder({
             "msg": "time updated"

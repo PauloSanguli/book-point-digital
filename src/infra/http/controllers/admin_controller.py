@@ -6,12 +6,16 @@ from src.infra.models import engine, admin
 from src.application.security import SecurityPWD
 
 from src.domain.validators import validate
+from src.domain.entities import Times
 
 from fastapi import HTTPException
 
 from src.domain.entities import AdminFields
 
 from src.infra.handlers import HandlerJSON
+
+from typing import Type
+
 
 
 
@@ -59,4 +63,14 @@ class AdminController:
             )
 
 
-    def update_time() -> None:...
+    def update_time(props: Type[Times]) -> None:
+        """update time of an classroom"""
+        try:
+            handler = HandlerJSON("json")
+            handler.update_times(props.classroom, props.turn, props.time)
+        except Exception as error:
+            print(error)
+            raise HTTPException(
+                detail="time dont updated",
+                status_code=200
+            )
