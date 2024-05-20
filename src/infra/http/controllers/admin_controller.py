@@ -43,7 +43,7 @@ class AdminController:
         """change datas admin"""
         dic = admin_props.model_dump()
         model_formated = {}
-        for index, key in enumerate(dic):
+        for _, key in enumerate(dic):
             if dic[key]:
                 model_formated[key] = dic[key]
         try:
@@ -58,8 +58,5 @@ class AdminController:
                 status_code=400
             )
 
-    def get_times() -> list:
-        """get all times"""
-        handler = HandlerJSON("json", "times")
-        print(handler.read())
-        return []
+
+    def update_time() -> None:...

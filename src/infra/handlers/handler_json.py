@@ -10,12 +10,42 @@ import os
 
 
 class HandlerJSON:
-    def __init__(self, type, filename):
+    def __init__(self, type, folder = "times"):
         self.__encode = json.dumps
         self.__decode = json.loads
-        self.__path = os.path.join(PATH, type, filename)
+        self.__path = os.path.join(PATH, type, folder)
     
-    def read(self) -> dict:
+    def read(self, filename: str) -> dict:
         """read datas on json file"""
-        text_json = Path(self.__path).read_text()
+        text_json = Path(os.path.join(self.__path, filename)).read_text()
         return self.__decode(text_json)
+
+    def read_all(self) -> list:
+        """read all times"""
+        files = os.listdir(self.__path)
+        times = []
+        
+        for file in files:
+            key_ = file[1:file.index(".")]
+            times.append({
+                f"{key_}": self.read(file)
+            })
+        return times
+
+    
+    def update_times(self, classroom: str, turn: str, updates: dict) -> None:
+        """update times"""
+        files = os.listdir(self.__path)
+        
+        for file in files:
+            if classroom in file:
+                old_times = self.read(file)
+                old_times[f"{turn}"] = updates
+                self.regist_datas(file, old_times)
+
+    def regist_datas(self, filename: str, datas: any) -> None:
+        """update file json"""
+        path_file = os.path.join(self.__path, filename)
+        with open(path_file, "w") as file:
+            file.write(self.__encode(datas, indent=4))
+            file.close()

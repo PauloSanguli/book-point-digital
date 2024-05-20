@@ -8,6 +8,7 @@ from src.infra.http.controllers import AdminController as controller
 from src.infra.http.middleware import JWTTokenExceptionHandler
 
 from src.domain.entities import AdminFields
+from src.domain.entities import Times
 
 from typing import Annotated
 
@@ -36,4 +37,13 @@ def edit_account(account_logged: Annotated[
         content=jsonable_encoder({
             "msg": "account adited"
         })
+    )
+
+@patch_admin.patch("/time")
+def update_time(props: Times):
+    return JSONResponse(
+        content=jsonable_encoder({
+            "msg": "time updated"
+        }),
+        status_code=200
     )

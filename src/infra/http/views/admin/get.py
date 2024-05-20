@@ -11,6 +11,7 @@ from src.infra.repositorys import RepositoryAdmin as repository
 
 from src.infra.http.controllers import AdminController as controller
 
+from src.infra.handlers import HandlerJSON
 
 
 
@@ -29,7 +30,9 @@ async def datas_admin(account_logged: Annotated[
     
 @get_admin.get("/times/")
 async def get_times():
-    response = controller.get_times()
+    handler = HandlerJSON("json")
+    response = handler.read_all()
+    
     return JSONResponse(
         content=jsonable_encoder(response)
     )
