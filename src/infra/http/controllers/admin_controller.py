@@ -11,6 +11,9 @@ from fastapi import HTTPException
 
 from src.domain.entities import AdminFields
 
+from src.infra.handlers import HandlerJSON
+
+
 
 
 class AdminController:
@@ -54,3 +57,9 @@ class AdminController:
                 detail="account dont updated",
                 status_code=400
             )
+
+    def get_times() -> list:
+        """get all times"""
+        handler = HandlerJSON("json", "times")
+        print(handler.read())
+        return []

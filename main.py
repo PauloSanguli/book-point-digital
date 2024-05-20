@@ -9,6 +9,7 @@ from src.infra.http.views.admin import patch_admin
 from src.infra.http.views.student import post_student
 from src.infra.http.views.student import delete_student
 from src.infra.http.views.student import get_student
+from src.infra.http.views.teachers import get_teacher
 from src.infra.http.views.teachers import post_teacher
 from src.infra.http.views.teachers import delete_teacher
 
@@ -25,6 +26,7 @@ app.include_router(patch_admin)
 app.include_router(delete_student)
 app.include_router(post_student)
 app.include_router(get_student)
+app.include_router(get_teacher)
 app.include_router(delete_teacher)
 app.include_router(post_teacher)
 

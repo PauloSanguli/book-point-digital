@@ -9,6 +9,9 @@ from src.infra.http.middleware import JWTTokenExceptionHandler
 
 from src.infra.repositorys import RepositoryAdmin as repository
 
+from src.infra.http.controllers import AdminController as controller
+
+
 
 
 get_admin = APIRouter(prefix="/admin", tags=["admin"])
@@ -22,4 +25,11 @@ async def datas_admin(account_logged: Annotated[
     return JSONResponse(
         content=jsonable_encoder(response),
         status_code=200
+    )
+    
+@get_admin.get("/times/")
+async def get_times():
+    response = controller.get_times()
+    return JSONResponse(
+        content=jsonable_encoder(response)
     )

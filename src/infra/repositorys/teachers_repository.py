@@ -12,6 +12,8 @@ from sqlalchemy import and_, select
 
 from fastapi import HTTPException
 
+from src.infra.http.responses.responses import Response
+
 
 
 
@@ -52,3 +54,19 @@ class RepositoryTeachers(IRepositoryTeacher):
                 detail="error recording subjects",
                 status_code=400
             )
+
+    def get() -> list:
+        """select teachers from db"""
+        with Session(engine) as session:
+            query = select(
+                teachers.c.id,
+                teachers.c.name,
+                teachers.c.turn,
+                teachers.c.photo,
+                subjects.c.subject).select_from(
+                    teachers.join(
+                        subjects, teachers.c.id==subjects.c.teacher_id
+                    )
+                )
+            results = session.execute(query).fetchall()
+        return Response.get_teachers(results)
