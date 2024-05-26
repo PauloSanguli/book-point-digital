@@ -21,3 +21,8 @@ class IRepositoryTeacher(ABC):
     def regist_subject(subject: str, id_teacher: int) -> None:
         """regist subject on db"""
         raise NotImplementedError("implement method regist_subject")
+
+    @abstractmethod
+    def select_teacher(name: str) -> Type[list]:
+        """select techer from db"""
+        raise NotImplementedError("implement method select_teacher")

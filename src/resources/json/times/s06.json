@@ -1,20 +1,20 @@
 {
     "tarde": {
         "segunda-feira": {
-            "13:05-13:45": "Nicomedos Kialanda",
-            "13:45-14:45": "Nicomedos Kialanda",
-            "14:45-15:25": "Joaquim Mbala",
-            "15:45-16:30": "António Campos",
-            "16:30-17:20": "António Campos",
-            "17:20-18:05": "António Campos"
+            "13:05-13:45": "Don Frank",
+            "13:45-14:45": "Don Frank",
+            "14:45-15:25": "Celsio Gomes",
+            "15:45-16:30": "Celsio Gomes",
+            "16:30-17:20": "Celsio Gomes",
+            "17:20-18:05": "Celsio Gomes"
         },
         "terca-feira": {
             "13:05-13:45": "Marcial de Seabra",
             "13:45-14:45": "Marcial de Seabra",
             "14:45-15:25": "Marcial de Seabra",
-            "15:45-16:30": "António Campos",
-            "16:30-17:20": "António Campos",
-            "17:20-18:05": "António Campos"
+            "15:45-16:30": "Antonio Campos",
+            "16:30-17:20": "Antonio Campos",
+            "17:20-18:05": "Antonio Campos"
         },
         "quarta-feira": {
             "13:05-13:45": "Marcial de Seabra",
@@ -33,13 +33,54 @@
             "17:20-18:05": "borla"
         },
         "sexta-feira": {
-            "13:05-13:45": "Heldér Joaquim",
-            "13:45-14:45": "Heldér Joaquim",
+            "13:05-13:45": "Helder Joaquim",
+            "13:45-14:45": "Helder Joaquim",
             "14:45-15:25": "Joaquim Mabala",
             "15:45-16:30": "Joaquim Mabala",
             "16:30-17:20": "Marcial de Seabra",
             "17:20-18:05": "Marcial de Seabra"
         }
     },
-    "manha": {}
+    "manha": {
+        "segunda-feira": {
+            "08:05-08:45": "Don Frank",
+            "08:45-09:45": "Don Frank",
+            "09:45-10:25": "Celsio Gomes",
+            "10:45-11:20": "Celsio Gomes",
+            "11:20-11:45": "Celsio Gomes",
+            "11:45-12:20": "Celsio Gomes"
+        },
+        "terca-feira": {
+            "08:05-08:45": "Marcial de Seabra",
+            "08:45-09:45": "Marcial de Seabra",
+            "09:45-10:25": "Marcial de Seabra",
+            "10:45-11:20": "Antonio Campos",
+            "11:20-11:45": "Antonio Campos",
+            "11:45-12:20": "Antonio Campos"
+        },
+        "quarta-feira": {
+            "08:05-08:45": "Marcial de Seabra",
+            "08:45-09:45": "Marcial de Seabra",
+            "09:45-10:25": "Marcial de Seabra",
+            "10:45-11:20": "Marcial de Seabra",
+            "11:20-11:45": "Nicodemos Kialanda",
+            "11:45-12:20": "Nicodemos Kialanda"
+        },
+        "quinta-feira": {
+            "08:05-08:45": "Joaquim Mabala",
+            "08:45-09:45": "Joaquim Mabala",
+            "09:45-10:25": "Marcial de Seabra",
+            "10:45-11:20": "Marcial de Seabra",
+            "11:20-11:45": "borla",
+            "11:45-12:20": "borla"
+        },
+        "sexta-feira": {
+            "08:05-08:45": "Helder Joaquim",
+            "08:45-09:45": "Helder Joaquim",
+            "09:45-10:25": "Joaquim Mabala",
+            "10:45-11:20": "Joaquim Mabala",
+            "11:20-11:45": "Marcial de Seabra",
+            "11:45-12:20": "Marcial de Seabra"
+        }
+    }
 }
