@@ -1,3 +1,2 @@
 # run server
-uvicorn main:app --reload --port=3715 &
-
+uvicorn main:app --reload --port=3715

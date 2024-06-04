@@ -1,0 +1,102 @@
+{
+   "morning": [
+      {
+         "time": "08:05-08:45",
+         "subject": "Empreendedorismo",
+         "students": [],
+         "teacher": "Don Frank",
+         "status": 0,
+         "id": 4
+      },
+      {
+         "time": "08:45-09:45",
+         "subject": "Empreendedorismo",
+         "students": [],
+         "teacher": "Don Frank",
+         "status": 0,
+         "id": 4
+      },
+      {
+         "time": "09:45-10:25",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      },
+      {
+         "time": "10:45-11:20",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      },
+      {
+         "time": "11:20-11:45",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      },
+      {
+         "time": "11:45-12:20",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      }
+   ],
+   "afternoon": [
+      {
+         "time": "13:05-13:45",
+         "subject": "Empreendedorismo",
+         "students": [],
+         "teacher": "Don Frank",
+         "status": 0,
+         "id": 4
+      },
+      {
+         "time": "13:45-14:45",
+         "subject": "Empreendedorismo",
+         "students": [],
+         "teacher": "Don Frank",
+         "status": 0,
+         "id": 4
+      },
+      {
+         "time": "14:45-15:25",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      },
+      {
+         "time": "15:45-16:30",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      },
+      {
+         "time": "16:30-17:20",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      },
+      {
+         "time": "17:20-18:05",
+         "subject": "Seac",
+         "students": [],
+         "teacher": "Celsio Gomes",
+         "status": 0,
+         "id": 7
+      }
+   ]
+}

@@ -15,7 +15,9 @@ from src.infra.http.views.teachers import delete_teacher
 
 import uvicorn
 
-
+from sqlalchemy.orm import Session
+from sqlalchemy import select
+from src.infra.models import engine, admin
 
 
 app = FastAPI(title="API book school")

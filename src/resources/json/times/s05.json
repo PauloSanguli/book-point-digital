@@ -1,6 +1,6 @@
 {
-    "tarde": {
-        "segunda-feira": {
+    "afternoon": {
+        "monday": {
             "13:05-13:45": "Don Frank",
             "13:45-14:45": "Don Frank",
             "14:45-15:25": "Celsio Gomes",
@@ -8,7 +8,7 @@
             "16:30-17:20": "Celsio Gomes",
             "17:20-18:05": "Celsio Gomes"
         },
-        "terca-feira": {
+        "tuesday": {
             "13:05-13:45": "Marcial de Seabra",
             "13:45-14:45": "Marcial de Seabra",
             "14:45-15:25": "Marcial de Seabra",
@@ -16,7 +16,7 @@
             "16:30-17:20": "Antonio Campos",
             "17:20-18:05": "Antonio Campos"
         },
-        "quarta-feira": {
+        "wednesday": {
             "13:05-13:45": "Marcial de Seabra",
             "13:45-14:45": "Marcial de Seabra",
             "14:45-15:25": "Marcial de Seabra",
@@ -24,7 +24,7 @@
             "16:30-17:20": "Nicodemos Kialanda",
             "17:20-18:05": "Nicodemos Kialanda"
         },
-        "quinta-feira": {
+        "thursday": {
             "13:05-13:45": "Joaquim Mabala",
             "13:45-14:45": "Joaquim Mabala",
             "14:45-15:25": "Marcial de Seabra",
@@ -32,7 +32,7 @@
             "16:30-17:20": "borla",
             "17:20-18:05": "borla"
         },
-        "sexta-feira": {
+        "friday": {
             "13:05-13:45": "Helder Joaquim",
             "13:45-14:45": "Helder Joaquim",
             "14:45-15:25": "Joaquim Mabala",
@@ -41,8 +41,8 @@
             "17:20-18:05": "Marcial de Seabra"
         }
     },
-    "manha": {
-        "segunda-feira": {
+    "morning": {
+        "monday": {
             "08:05-08:45": "Don Frank",
             "08:45-09:45": "Don Frank",
             "09:45-10:25": "Celsio Gomes",
@@ -50,7 +50,7 @@
             "11:20-11:45": "Celsio Gomes",
             "11:45-12:20": "Celsio Gomes"
         },
-        "terca-feira": {
+        "tuesday": {
             "08:05-08:45": "Marcial de Seabra",
             "08:45-09:45": "Marcial de Seabra",
             "09:45-10:25": "Marcial de Seabra",
@@ -58,7 +58,7 @@
             "11:20-11:45": "Antonio Campos",
             "11:45-12:20": "Antonio Campos"
         },
-        "quarta-feira": {
+        "wednesday": {
             "08:05-08:45": "Marcial de Seabra",
             "08:45-09:45": "Marcial de Seabra",
             "09:45-10:25": "Marcial de Seabra",
@@ -66,7 +66,7 @@
             "11:20-11:45": "Nicodemos Kialanda",
             "11:45-12:20": "Nicodemos Kialanda"
         },
-        "quinta-feira": {
+        "thursday": {
             "08:05-08:45": "Joaquim Mabala",
             "08:45-09:45": "Joaquim Mabala",
             "09:45-10:25": "Marcial de Seabra",
@@ -74,7 +74,7 @@
             "11:20-11:45": "borla",
             "11:45-12:20": "borla"
         },
-        "sexta-feira": {
+        "friday": {
             "08:05-08:45": "Helder Joaquim",
             "08:45-09:45": "Helder Joaquim",
             "09:45-10:25": "Joaquim Mabala",

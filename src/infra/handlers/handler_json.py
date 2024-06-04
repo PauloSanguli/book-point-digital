@@ -8,6 +8,7 @@ import json
 
 import os
 
+from datetime import datetime
 
 
 
@@ -58,3 +59,14 @@ class HandlerJSON:
         with open(path_file, "w") as file:
             file.write(self.__encode(datas, indent=4))
             file.close()
+
+    @staticmethod
+    def count_books() -> int:
+        """count number of books"""
+        CURRENT_YEAR = str(datetime.utcnow().date().year)
+        PATHBOOKNOW = os.path.join(
+            PATH, "json", "books", CURRENT_YEAR
+        )
+        booksListed = os.listdir(PATHBOOKNOW)
+        return len(booksListed)*2
+        

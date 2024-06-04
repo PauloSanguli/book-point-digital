@@ -23,25 +23,24 @@ class CreateFolders:
         if not os.path.exists(full_path):
             os.makedirs(full_path)
 
-            cls.create_subfolders()
+            cls.__create_subfolders()
     
     @classmethod
-    def create_subfolders(cls) -> None:
+    def __create_subfolders(cls) -> None:
         """create files in current directory"""
-        constants = cls.get_constants()
+        constants = cls.__get_constants()
         for c in range(constants["folders"]["classroom"]):
-            zero_left = ""
-            if c<=9: zero_left = "0"
-            NAME_FILE = f"{zero_left}{c+1}"
+            name_file = f"{c+1}"
+            if len(name_file) == 1: name_file = "0"+name_file
             
-            PATH_CLASSROOM_FOLDER = os.path.join(cls.FULL_PATH, cls.CURRENT_YEAR, NAME_FILE)
+            PATH_CLASSROOM_FOLDER = os.path.join(cls.FULL_PATH, cls.CURRENT_YEAR, name_file)
             
             os.makedirs(PATH_CLASSROOM_FOLDER)
             for item in constants["months"]:
                 os.makedirs(os.path.join(PATH_CLASSROOM_FOLDER, item))
 
     @classmethod
-    def get_constants(cls) -> any:
+    def __get_constants(cls) -> any:
         """get the names of folders and files from json file"""
         constants = Path(os.path.join(PATH, "json", "constants.json")).read_text()
         return json.loads(constants)

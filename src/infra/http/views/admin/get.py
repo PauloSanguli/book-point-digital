@@ -29,10 +29,23 @@ async def datas_admin(account_logged: Annotated[
     )
     
 @get_admin.get("/times/")
-async def get_times():
+async def get_times(account_logged: Annotated[
+    dict, Depends(JWTTokenExceptionHandler.get_user_logged)]):
     handler = HandlerJSON("json")
     response = handler.read_all()
     
     return JSONResponse(
-        content=jsonable_encoder(response)
+        content=jsonable_encoder(response),
+        status_code=200
+    )
+
+@get_admin.get("/total/")
+async def get_total(account_logged: Annotated[
+    dict, Depends(JWTTokenExceptionHandler.get_user_logged)]):
+    response = repository.count_entities()
+    response["book"] = HandlerJSON.count_books()
+    
+    return JSONResponse(
+        content=jsonable_encoder(response),
+        status_code=200
     )

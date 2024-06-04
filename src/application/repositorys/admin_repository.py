@@ -17,3 +17,8 @@ class IRepositoryAdmin(ABC):
     def get(id_admin: int) -> dict:
         """get datas admin"""
         raise NotImplementedError("implement method get")
+
+    @abstractmethod
+    def count_entities() -> dict:
+        """count entities on db"""
+        raise NotImplementedError("implement method count_entities")

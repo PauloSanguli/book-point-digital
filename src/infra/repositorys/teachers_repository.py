@@ -74,6 +74,8 @@ class RepositoryTeachers(IRepositoryTeacher):
     def select_teacher(name: str) -> type[list]:
         """select teacher by the name"""
         with Session(engine) as session:
-            teacher_finded = session.execute(select(teachers).\
-                where(and_(teachers.c.name.like(name)))).fetchone()
+            teacher_finded = session.execute(select(teachers, subjects.c.subject).select_from(
+                teachers.join(subjects, teachers.c.id==subjects.c.teacher_id)    
+            ).\
+            where(and_(teachers.c.name.like(name)))).fetchone()
         return teacher_finded

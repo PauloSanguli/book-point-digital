@@ -4,7 +4,7 @@ from src.domain.entities.admin import AdminProps
 
 from src.application.repositorys import IRepositoryAdmin
 
-from src.infra.models import engine, admin
+from src.infra.models import engine, admin, student, teachers
 
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy import and_, select
@@ -69,4 +69,14 @@ class RepositoryAdmin(IRepositoryAdmin):
             "name": datas[0],
             "email": datas[1],
             "photo": datas[2]
+        }
+
+    def count_entities() -> dict:
+        """count number of entities on db"""
+        with Session(engine) as session:
+            students_count = session.execute(select(student)).fetchall()
+            teachers_count = session.execute(select(teachers)).fetchall()
+        return {
+            "teacher": len(teachers_count),
+            "student": len(students_count)
         }
